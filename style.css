@@ -1,16 +1,10 @@
-html {
-  font-size: 18px; }
-
-body {
-  letter-spacing: 0.2rem; }
-
 /*page fade*/
 #pageWrap {
-  -webkit-animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -ms-animation: fadein 2s;
-  -o-animation: fadein 2s;
-  animation: fadein 2s; }
+  -webkit-animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -ms-animation: fadein 3s;
+  -o-animation: fadein 3s;
+  animation: fadein 3s; }
 
 @keyframes fadein {
   from {
@@ -38,40 +32,62 @@ body {
   to {
     opacity: 1; } }
 /*page fade*/
-/* para */
-.para {
-  -webkit-perspective: 1px;
-  -webkit-perspective-origin-x: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto; }
+html {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%; }
 
-.para-layer {
-  -webkit-transform-origin-x: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
+body {
+  height: 100%;
+  width: 100%; }
 
-.para-layer-base {
-  -webkit-transform: translateZ(0);
+#pageWrap {
+  height: 100%;
+  width: 100%; }
+
+h1 {
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 6.8rem; }
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 5rem; }
+
+h3 {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  line-height: 3.5rem; }
+
+#wrap1 {
+  /* display & box model*/
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
   background: blue; }
 
-.para-layer-back {
-  -webkit-transform: translateZ(-1px) scale(2);
-  background: red; }
+#map-block {
+  position: absolute;
+  top: 10%;
+  height: 20%;
+  width: 20%; }
 
-.para-group {
-  position: relative;
-  height: 100vh;
-  -webkit-transform-style: preserve-3d; }
+#map-block:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: red;
+  z-index: 1000; }
 
-/* ^^^para^^^ */
-/* */
-/* */
-#pageWrap {
-  background: url(resource/interior.jpg) no-repeat;
-  background-size: cover; }
+#wrap2 {
+  /* display & box model*/
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: yellow; }
 
 /*# sourceMappingURL=style.css.map */

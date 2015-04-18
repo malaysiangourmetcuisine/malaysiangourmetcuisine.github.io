@@ -3,18 +3,70 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+		<title>馬來風光特色餐廳</title>
 		<link rel="stylesheet" type="text/css" href="reset.css">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="resource/font-awesome/css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlc0XXqyMaA-zHSfSLpRJdVEu0U0uUC00">
+    	</script>
+
+    	<script type="text/javascript">
+    		function initialize() {
+			  var mapOptions = {
+			    zoom: 14,
+			    center: new google.maps.LatLng(36.580247, -41.817628)
+			  };
+
+			  var map = new google.maps.Map(document.getElementById('map-canvas'),
+			      mapOptions);
+			}
+
+			function loadScript() {
+			  var script = document.createElement('script');
+			  script.type = 'text/javascript';
+			  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+			      '&signed_in=true&callback=initialize';
+			  document.body.appendChild(script);
+			}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+    	</script>
+
 
 	</head>
 
 
 	<body>
 		<div id="pageWrap">
-	測試 測試看看 
+			
+			<div id="wrap1">
+				<div id="wrap1-1">
+					<div id="map-canvas"></div>
 
-		</div>
+				</div>	<!-- end of wrap1-1 -->
+			</div>	<!-- end of wrap1 -->
+
+
+			<div id="wrap2">
+				<div id="wrap2-1">
+					
+				</div>
+				<!-- end of wrap2-1 -->
+			</div>	<!-- end of wrap2 -->
+
+		</div>	<!-- end of pageWrap -->
+
+		<footer>
+			
+		</footer>
+
 	</body>
 
 </html>
