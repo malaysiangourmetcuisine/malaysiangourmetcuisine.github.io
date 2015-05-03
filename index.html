@@ -11,21 +11,47 @@
 		<link rel="stylesheet" type="text/css" href="resource/font-awesome/css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-32286.js"></script>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 		<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlc0XXqyMaA-zHSfSLpRJdVEu0U0uUC00">
-    	</script>
+	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlc0XXqyMaA-zHSfSLpRJdVEu0U0uUC00">
+		</script> 
 
-    	<script type="text/javascript">
-    		function initialize() {
+		<script type="text/javascript">
+			function initialize() {
+			  var myLatlng = new google.maps.LatLng(25.036321, 121.575275);
 			  var mapOptions = {
-			    zoom: 14,
-			    center: new google.maps.LatLng(36.580247, -41.817628)
-			  };
+			    zoom: 18,
+			    center: myLatlng,
+			    styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}],
+			    scrollwheel: false,
+			    draggable : false,
+			    streetViewControl: false,
+			    zoomControlOptions: {
+		        style: google.maps.ZoomControlStyle.LARGE,
+		        },
+		        mapTypeControlOptions: {
+		        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+		    	},
+		    	overviewMapControlOptions: {
+		        opened: true,
+		    	},
+			  }
 
-			  var map = new google.maps.Map(document.getElementById('map-canvas'),
-			      mapOptions);
+			  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+			  var marker = new google.maps.Marker({
+			      position: myLatlng,
+			      map: map,
+			      title: '馬來風光特色餐廳',
+			      url: "https://goo.gl/maps/ZXaUx",
+			  });
+			  google.maps.event.addListener(marker, 'click', function() {
+                		window.open(marker.url);
+            		});
+		  
 			}
 
 			function loadScript() {
@@ -37,35 +63,69 @@
 			}
 
 			google.maps.event.addDomListener(window, 'load', initialize);
-    	</script>
-
+		</script>
 
 	</head>
 
 
 	<body>
+
+		<div id="banner">
+			<input id="menuToggle" type="checkbox"></input>
+			<label for="menuToggle"><div id="menuIcon"><i class="fa fa-gear"></i></div></label>
+			<div id="siteTitle"><p>馬來風光特色餐廳</p></div>
+			<div id="nav">
+				<ul>
+					<a id="li-1" href="#wrap1"><li><i class="fa fa-map-marker"></i>資訊</li></a>
+					<a id="li-2" href="#wrap2"><li><i class="fa fa-coffee"></i>餐點</li></a>
+					<a id="li-3" href="#wrap3"><li><i class="fa fa-info-circle"></i>報導</li></a>
+				</ul>
+			</div>
+		</div> <!-- end of banner -->
+
 		<div id="pageWrap">
-			
-			<div id="wrap1">
-				<div id="wrap1-1">
-					<div id="map-canvas"></div>
 
-				</div>	<!-- end of wrap1-1 -->
-			</div>	<!-- end of wrap1 -->
+			<div id="wrap0">
+				<h1>馬來風光特色餐廳</h1>
+			</div> <!-- end of wrap0 -->
 
+			<div id="wrap1" class="bottomBorder wraps">
 
-			<div id="wrap2">
-				<div id="wrap2-1">
-					
+				<div id="wrap1-info">
+					<a href="https://goo.gl/maps/ZXaUx" target="_blank"><p>台北市 信義區 信義路六段15巷30號<i class="fa fa-external-link"></i></p></a>
+					<p>營業時間 11:30AM - 9PM</p>
+					<p>聯絡電話 02 2728 3822</p>
+
 				</div>
-				<!-- end of wrap2-1 -->
-			</div>	<!-- end of wrap2 -->
 
-		</div>	<!-- end of pageWrap -->
+				<div id="wrap1-map"> 
+					<p id="mapCap">點擊標示<i class="fa fa-map-marker"></i>前往google地圖</p>
+					<div id="map-canvas">
+						<a id="mapFallback" href="https://goo.gl/maps/ZXaUx" target="_blank">
+							<div id="mapFallbackText" alt="無法顯示地圖元件">
+								<p>無法顯示地圖元件</p>
+								<h2>點此前往Google地圖<i class="fa fa-external-link"></i></h2>
+							</div>	<!-- end of mapFallbackText -->
+						</a>	<!-- end of mapFallback -->
+					</div>	<!-- end of canvas -->
 
+				</div>	<!-- end of wrap1-map -->
+
+			</div> <!-- end of wrap1 -->
+
+			<div id="wrap2" class="bottomBorder wraps">
+				wrap2
+			</div> <!-- end of wrap2 -->
+
+			<div id="wrap3" class="wraps">
+				wrap3
+			</div> <!-- end of wrap3 -->
+
+		</div> <!-- end of pageWrap -->
+<!-- 
 		<footer>
-			
-		</footer>
+			footer
+		</footer> <!-- end of footer --> -->
 
 	</body>
 
