@@ -1,0 +1,16 @@
+table {
+	margin: 30px;
+}
+
+td:nth-child(1) {
+	width: 150px;
+}
+
+td:nth-child(2) {
+	width: 60px;
+	text-align: right;
+}
+
+td, th {
+	padding: 5px;
+}

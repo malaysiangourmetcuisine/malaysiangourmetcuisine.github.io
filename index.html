@@ -70,7 +70,8 @@
 
 	<body>
 
-		<div id="banner">
+		<div id="pageWrap">
+			<div id="banner">
 			<input id="menuToggle" type="checkbox"></input>
 			<label for="menuToggle"><div id="menuIcon"><i class="fa fa-gear"></i></div></label>
 			<div id="siteTitle"><p>馬來風光特色餐廳</p></div>
@@ -83,23 +84,26 @@
 			</div>
 		</div> <!-- end of banner -->
 
-		<div id="pageWrap">
-
 			<div id="wrap0">
-				<h1>馬來風光特色餐廳</h1>
+				<div id="title-wrap">
+					<h1>馬來風光<span>特色餐廳</span></h1>
+					<!-- <h1>馬來風光特色餐廳</h1> -->
+				</div> <!-- end of title-wrap -->
 			</div> <!-- end of wrap0 -->
 
-			<div id="wrap1" class="bottomBorder wraps">
 
-				<div id="wrap1-info">
-					<a href="https://goo.gl/maps/ZXaUx" target="_blank"><p>台北市 信義區 信義路六段15巷30號<i class="fa fa-external-link"></i></p></a>
+			<div id="wrap1" class="bottomBorder wraps">
+				
+				<div class="wrap1-inner" id="wrap1-info">
+					<a href="https://goo.gl/maps/ZXaUx" target="_blank"><p>台北市 信義區</p><p>信義路六段15巷30號<i class="fa fa-external-link"></i></p></a>
 					<p>營業時間 11:30AM - 9PM</p>
 					<p>聯絡電話 02 2728 3822</p>
+					<br>
+					<p id="map-description">點擊標示 <i class="fa fa-map-marker"></i> 前往google地圖</p>
+				</div> <!-- end of wrap1-info -->
 
-				</div>
-
-				<div id="wrap1-map"> 
-					<p id="mapCap">點擊標示<i class="fa fa-map-marker"></i>前往google地圖</p>
+				<div class="wrap1-inner" id="wrap1-map">
+					
 					<div id="map-canvas">
 						<a id="mapFallback" href="https://goo.gl/maps/ZXaUx" target="_blank">
 							<div id="mapFallbackText" alt="無法顯示地圖元件">
@@ -108,24 +112,40 @@
 							</div>	<!-- end of mapFallbackText -->
 						</a>	<!-- end of mapFallback -->
 					</div>	<!-- end of canvas -->
-
 				</div>	<!-- end of wrap1-map -->
-
 			</div> <!-- end of wrap1 -->
 
+
 			<div id="wrap2" class="bottomBorder wraps">
-				wrap2
+				<div id="wrap2-inner">
+					s
+				</div> <!-- end of wrap2-inner -->
 			</div> <!-- end of wrap2 -->
 
-			<div id="wrap3" class="wraps">
-				wrap3
+			<div id="wrap3">
+				<div id="wrap3-inner">
+					wrap3
+				</div>
 			</div> <!-- end of wrap3 -->
 
+
+			<div id="footer">
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+				<p>footernwonxkwwklxmlw</p>
+
+			</div> <!-- end of footer -->
+
 		</div> <!-- end of pageWrap -->
-<!-- 
-		<footer>
-			footer
-		</footer> <!-- end of footer --> -->
+
 
 	</body>
 
