@@ -19,8 +19,23 @@
 
 
 	<body>
+
+		<div class="page-wrap">
+			<div id="banner">
+				<input id="menuToggle" type="checkbox"></input>
+				<label for="menuToggle"><div id="menuIcon"><i class="fa fa-gear"></i></div></label>
+				<!-- <div id="siteTitle"><p>馬來風光特色餐廳</p></div> -->
+				<div id="nav">
+					<ul>
+						<a id="li-1" href="index.html#wrap2"><li><i class="fa fa-map-marker"></i>資訊</li></a>
+						<a id="li-3" href="index.html#wrap3"><li><i class="fa fa-info-circle"></i>報導</li></a>
+						<a id="li-2" href="menu.html" target="_blank"><li><i class="fa fa-coffee"></i>餐點</li></a>
+					</ul>
+				</div> <!-- end of nav -->
+			</div> <!-- end of banner -->
 					
 		<div id="menu-wrap">
+			
 				<div id="menu">
 					<div class="table-wrap">
 					<table id="combo">
@@ -34,18 +49,18 @@
 						</tr>
 						
 						<tr>
-							<td>鯖魚飯套餐</td>
-							<td>180</td>
+							<td><a href="#lb-combo-mackerel">鯖魚飯套餐</a></td>
+							<td><a href="#lb-combo-mackerel">180</a></td>
 						</tr>
 						
 						<tr>
-							<td>海鮮冬炎米粉</td>
-							<td>180</td>
+							<td><a href="#lb-combo-tomyumricenoodle">海鮮冬炎米粉</a></td>
+							<td><a href="#lb-combo-tomyumricenoodle">180</a></td>
 						</tr>
 
 						<tr>
-							<td>馬來炸雞飯</td>
-							<td>180</td>
+							<td><a href="#lb-combo-friedchicken">馬來炸雞飯</a></td>
+							<td><a href="#lb-combo-friedchicken">180</a></td>
 						</tr>
 
 						<tr>
@@ -322,7 +337,17 @@
 					</div> <!-- end of table-wrap -->
 
 				</div> <!-- end of menu -->
-		</div> <!-- end of menu-wrap -->
+
+					<!-- Lightbox Images -->
+					<a href="#_" id="lb-combo-mackerel" class="lb"><img src="resource/combo/鯖魚飯套餐.jpg"></a>
+					<a href="#_" id="lb-combo-tomyumricenoodle" class="lb"><img src="resource/combo/海鮮冬炎米粉.jpg"></a>
+					<a href="#_" id="lb-combo-friedchicken" class="lb"><img src="resource/combo/馬來炸雞套餐.jpg"></a>
+			</div> <!-- end of menu-wrap -->
+
+			<div id="footer">
+				<a href="https://www.facebook.com/malaysiangourmetcuisine" target="_blank"><img src="resource/facebook.png"></a>
+			</div> <!-- end of footer -->
+	</div> <!-- end of page-wrap -->
 
 	</body>
 </html>

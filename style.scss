@@ -44,6 +44,8 @@ html {
 	font-size: 62.5%;
 	box-sizing: border-box;
 	height: 100%;
+
+	background: whitesmoke;
 }
 
 body {
@@ -85,10 +87,11 @@ p {
 }
 
 
-#pageWrap {
+.page-wrap {
 	height: 100%;
 	// margin-top: 70px;
 	padding-bottom: 1%;
+	background: whitesmoke;
 	// opacity: 0;
 
 
@@ -141,6 +144,8 @@ p {
 				box-shadow: 0 1px 1px rgb(70,70,70);
 
 				border-radius: 20%;
+
+				cursor: pointer;
 
 					i {
 						display: inline;
@@ -593,10 +598,11 @@ p {
 			height: 40px;
 			margin-top: 5px;
 			margin-bottom: 5px;
+
+			fill: rgb(100,100,255);
 		}
 	} // end of footer
 
-} // end of pageWrap
 
 #menu-wrap {
 	box-sizing: border-box;
@@ -606,8 +612,9 @@ p {
 	height: auto;
 	// margin-right: auto;
 	// margin-left: auto;
+	margin-top: 50px;
 	padding-bottom: 100px;
-	background: blue;
+	background: whitesmoke;
 
 	// overflow: auto;
 	// -webkit-overflow-scrolling: touch;
@@ -626,7 +633,7 @@ p {
 			margin: 0 auto;
 			padding-top: 20px;
 			text-align: center;
-			background: grey;
+			// background: grey;
 
 			@media all and (min-width: 320px) {
 				width: 320px;
@@ -682,6 +689,11 @@ p {
 
 						// border: solid 1px rgb(180,180,180);
 						// border-radius: 50%;
+
+							a {
+								color: rgb(150,100,100);
+								text-decoration: none;
+							}
 
 							td, th {
 								vertical-align: middle;
@@ -748,4 +760,51 @@ p {
 				} // end of table-wrap
 		} // end of menu
 
+		.lb {
+			display: none;
+			opacity: 0;
+			position: fixed;
+			left: 0;
+			top: 0;
+
+
+			width: 100%;
+			height: 100%;
+			// text-align: center;
+			text-decoration: none;
+			background-color: rgba(0,0,0,0.7);
+			-webkit-transition: all 500ms;
+			transition: all 500ms;
+
+			img {
+				position: absolute;
+				height: 70%;
+				// width: auto;
+				// max-width: 90%;
+
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+
+				@media all and (max-width: 640px) {
+					width: 80%;
+					height: auto;
+				}
+			}
+
+		}
+
+		.lb:target {
+			display: block;
+			opacity: 1;
+			outline: none;
+		}
+
 } // end of menu-wrap
+
+} // end of page-wrap
+
+
+
