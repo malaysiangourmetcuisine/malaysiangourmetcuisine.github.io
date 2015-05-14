@@ -69,19 +69,27 @@
 
 
 	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=86580087431";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
 		<div id="pageWrap">
 			<div id="banner">
 			<input id="menuToggle" type="checkbox"></input>
 			<label for="menuToggle"><div id="menuIcon"><i class="fa fa-gear"></i></div></label>
-			<div id="siteTitle"><p>馬來風光特色餐廳</p></div>
+			<!-- <div id="siteTitle"><p>馬來風光特色餐廳</p></div> -->
 			<div id="nav">
 				<ul>
-					<a id="li-1" href="#wrap1"><li><i class="fa fa-map-marker"></i>資訊</li></a>
-					<a id="li-2" href="#wrap2"><li><i class="fa fa-coffee"></i>餐點</li></a>
+					<a id="li-1" href="#wrap2"><li><i class="fa fa-map-marker"></i>資訊</li></a>
 					<a id="li-3" href="#wrap3"><li><i class="fa fa-info-circle"></i>報導</li></a>
+					<a id="li-2" href="menu.html" target="_blank"><li><i class="fa fa-coffee"></i>餐點</li></a>
 				</ul>
-			</div>
+			</div> <!-- end of nav -->
 		</div> <!-- end of banner -->
 
 			<div id="wrap0">
@@ -93,16 +101,33 @@
 
 
 			<div id="wrap1" class="bottomBorder wraps">
-				
-				<div class="wrap1-inner" id="wrap1-info">
-					<a href="https://goo.gl/maps/ZXaUx" target="_blank"><p>台北市 信義區</p><p>信義路六段15巷30號<i class="fa fa-external-link"></i></p></a>
-					<p>營業時間 11:30AM - 9PM</p>
-					<p>聯絡電話 02 2728 3822</p>
-					<br>
-					<p id="map-description">點擊標示 <i class="fa fa-map-marker"></i> 前往google地圖</p>
-				</div> <!-- end of wrap1-info -->
+				<div id="wrap1-inner">
+					<div id="wrap1-inner-img" class="wrap1-inline">
+					</div> <!-- end of inner-img -->
+					<div id="wrap1-inner-info" class="wrap1-inline">
+						<div id="info-wrap">
+							<p>歡迎蒞臨馬來風光特色餐廳，從廚師到食材香料全都是來自馬來西亞，在烹調得過程中全程使用過濾水清潔，而油是使用得意的一天葵花油，絕不放味精是全天然又健康的味覺享受！</p>
+						</div> <!-- info-wrap -->
+					</div> <!-- end of inner-info -->
+					<div id="wrap1-inner-img2" class="wrap1-inline">
+					</div> <!-- end of inner-img2 -->
+				</div> <!-- end of wrap1-inner -->				
+			</div> <!-- end of wrap1 -->
 
-				<div class="wrap1-inner" id="wrap1-map">
+
+			<div id="wrap2" class="bottomBorder wraps">
+				<div class="wrap2-inner" id="wrap2-info">
+					<div id="wrap2-info-inner">
+						<a href="https://goo.gl/maps/ZXaUx" target="_blank"><p>台北市 信義區</p><p>信義路六段15巷30號<i class="fa fa-external-link"></i></p></a>
+						<p>營業時間 11:30AM - 9PM</p>
+						<p>聯絡電話 02 2728 3822</p>
+						<br>
+						<p id="map-description">點擊標示 <i class="fa fa-map-marker"></i> 前往google地圖</p>
+					</div>
+					<!-- end of wrap2-info-inner -->
+				</div> <!-- end of wrap2-info -->
+
+				<div class="wrap2-inner" id="wrap2-map">
 					
 					<div id="map-canvas">
 						<a id="mapFallback" href="https://goo.gl/maps/ZXaUx" target="_blank">
@@ -113,35 +138,26 @@
 						</a>	<!-- end of mapFallback -->
 					</div>	<!-- end of canvas -->
 				</div>	<!-- end of wrap1-map -->
-			</div> <!-- end of wrap1 -->
-
-
-			<div id="wrap2" class="bottomBorder wraps">
-				<div id="wrap2-inner">
-					s
-				</div> <!-- end of wrap2-inner -->
 			</div> <!-- end of wrap2 -->
 
 			<div id="wrap3">
 				<div id="wrap3-inner">
-					wrap3
+					<!-- <video controls poster="resource/logo.png">
+						<source src="resource/malaysiangourmetcuisine-video.mp4" type="video/mp4">
+					</video> -->
+					<div id="video-wrap">
+						<iframe src="https://www.youtube.com/embed/sETkpZvgR_Y" frameborder="0" allowfullscreen></iframe>
+					</div> <!-- end of video-wrap -->
+					<div id="appledaily-link">
+						<a href="http://www.appledaily.com.tw/appledaily/article/supplement/20150324/36452646/" target="_blank">前往<span>蘋果日報</span>相關報導 <i class="fa fa-external-link"></i></a>
+					</div> <!-- end of appledaily-link -->
 				</div>
 			</div> <!-- end of wrap3 -->
 
 
 			<div id="footer">
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-				<p>footernwonxkwwklxmlw</p>
-
+				<a href="https://www.facebook.com/malaysiangourmetcuisine" target="_blank"><img src="resource/facebook.png"></a>
+				<!-- <div class="fb-like" data-href="https://www.facebook.com/malaysiangourmetcuisine" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div> -->
 			</div> <!-- end of footer -->
 
 		</div> <!-- end of pageWrap -->

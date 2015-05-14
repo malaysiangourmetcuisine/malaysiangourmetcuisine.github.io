@@ -88,7 +88,7 @@ p {
 #pageWrap {
 	height: 100%;
 	// margin-top: 70px;
-	padding-bottom: 10%;
+	padding-bottom: 1%;
 	// opacity: 0;
 
 
@@ -100,7 +100,8 @@ p {
 		height: 50px;
 		width: 100%;
 		z-index: 999;
-		background: rgba(200,30,30,0.3);
+		background: rgba(200,30,30,0.9);
+		text-align: center;
 		// background: rgba(230,230,230,0.5);
 
 		// background: url(resource/interior6.jpg) no-repeat;
@@ -117,16 +118,18 @@ p {
 			input:checked ~ #nav {
 						pointer-events: auto;
 						opacity: 1;
-						width: 100%;
+						height: 50px;
 			} // input:checked ~ #nav
 
 			#menuIcon {
 				box-sizing: border-box;
-				float: left;
+				// display: inline-block;
 				margin: 5px 10px 5px 10px;
 				height: 40px;
 				width: 40px;
 				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
 
 				@include centerbox;
 
@@ -178,17 +181,14 @@ p {
 				opacity: 0;
 				pointer-events: none;
 				position: fixed;
-				top: 0;
-				left: 60px;
-				width: 0;
-				height: 50px;
-				background: rgb(200,30,30);
+				top: 50px;
+				// left: 60px;
+				left: 0;
+				width: 100%;
+				height: 0;
+				background: rgba(200,30,30,0.9);
 				
-				z-index: 1000;
-
-				// text-align: center;
-				// transform: translate(-50px);
-				// -webkit-transform: translate(-50px);
+				overflow-y: hidden;
 
 				transition: opacity 800ms ease, width 800ms ease;
 				-webkit-transition: opacity 800ms ease, width 800ms ease;
@@ -222,6 +222,7 @@ p {
 								padding: 0 5px 0 5px;
 
 								border-radius: 10px;
+								box-shadow: 0 1px 1px rgb(70,70,70);
 
 								background: -webkit-linear-gradient(rgb(255,55,55), rgb(180,30,30) 90%);
 								background:    -moz-linear-gradient(rgb(255,55,55), rgb(180,30,30) 90%);
@@ -280,9 +281,85 @@ p {
 			} // end of title-wrap
 	} // end of wrap0
 
-
-
 	#wrap1 {
+		box-sizing: border-box;
+		position: relative;
+		display: block;
+		background: brown;
+		height: 450px;
+		width: 100%;
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+		// padding-bottom: 50px;
+		// padding-top: 50px;
+		@media all and (max-width: 640px) {
+					height: auto;
+				}
+
+			.wrap1-inline {
+				box-sizing: border-box;
+				// float: left;
+				display: inline-block;
+				vertical-align: middle;
+				// text-align: center;
+
+				@media all and (max-width: 640px) {
+					display: block;
+					width: 100%;
+				}
+			} // end of .wrap1-inline
+
+			#wrap1-inner-img {
+				height: 450px;
+				width: 35%;
+				// min-width: 650px;
+				background: url(resource/buburchacha.jpg) no-repeat;
+				background-position: 50% 50%;
+				background-size: cover;
+				@media all and (max-width: 640px) {
+					display: block;
+					width: 100%;
+				}
+			} // end of wrap1-inner-img
+
+			#wrap1-inner-info {
+				width: 30%;
+				height: 100%;
+				color: rgb(255,200,200);
+				text-align: center;
+				white-space: pre-line;
+				padding: 10px;
+				overflow: auto;
+
+				@media all and (max-width: 640px) {
+					display: block;
+					width: 100%;
+				}
+
+				#info-wrap {
+					display: block;
+					margin: auto;
+					
+				} // end of info-wrap
+			} // end of wrap1-inner-info
+
+			#wrap1-inner-img2 {
+				height: 450px;
+				width: 35%;
+				// min-width: 650px;
+				background: url(resource/single/乾煎黃魚.jpg) no-repeat;
+				background-position: 50% 50%;
+				background-size: cover;
+				@media all and (max-width: 640px) {
+					display: block;
+					width: 100%;
+				}
+			} // end of wrap1-inner-img2
+
+	} // end of wrap1
+
+	#wrap2 {
 		box-sizing: border-box;
 		position: relative;
 		display: block;
@@ -301,23 +378,37 @@ p {
 		text-align: center;
 		// vertical-align: center;
 
-			.wrap1-inner {
+			.wrap2-inner {
+				box-sizing: border-box;
 				display: inline-block;
 				// width: 50%;
-				margin: 25px;
+				margin: 25px 0 25px 0;
 				vertical-align: middle;
-			} // end of wrap1-inner
+			} // end of wrap2-inner
 
-			#wrap1-info {
-				height: auto;
+			#wrap2-info {
+				// display: inline-block;
+				position: relative;
+				height: 400px;
 				min-width: 300px;
 				width: 30%;
 				padding: 10px 5px 10px 5px;
 				color: rgb(80,80,80);
 
 				text-align: center;
+				vertical-align: middle;
 
 				background: rgba(255,255,255,0.7);
+
+				#wrap2-info-inner {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					@include all-center;
+
+					// height: 100%;
+					width: 100%;
+
 
 					a {
 						text-decoration: underline;
@@ -330,18 +421,19 @@ p {
 
 					#map-description {
 						font-style: italic;
-					}
+					} // end of map-description
+				} // end of wrap2-info-inner
 
-			} // end of wrap1-info
+			} // end of wrap2-info
 
-			// #wrap1-info:before {
+			// #wrap2-info:before {
 			//   content: "";
 			//   display: inline-block;
 			//   vertical-align: middle;
 			//   height: 100px;
 			// } // end of info before
 
-			#wrap1-map {
+			#wrap2-map {
 				box-sizing: border-box;
 				// position: relative;
 				height: 400px;
@@ -405,26 +497,67 @@ p {
 
 				} // end of map-canvas
 
-			} // end of wrap1-map
-	} // end of wrap1
-
-	#wrap2 {
-		box-sizing: border-box;
-		position: relative;
-		display: block;
-		background: brown;
-		height: 50%;
-		width: 100%;
-
+			} // end of wrap2-map
 	} // end of wrap2
+
+	
 
 	#wrap3 {
 		box-sizing: border-box;
 		position: relative;
 		
 		width: 100%;
-		height: 100%;
+		height: auto;
+		// padding-bottom: 1%;
 		// background: blue;
+		
+		#wrap3-inner {
+			box-sizing: border-box;
+			padding: 25px;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			background: black;
+		
+			// video {
+			// 	box-sizing: border-box;
+			// 	width: 90%;
+			// 	height: auto;
+			// 	margin: 25px auto 25px auto;
+			// } // end of video
+			#video-wrap {
+				display: inline-block;
+				width: 90%;
+				height: 0;
+				padding-bottom: 57.25%;
+
+				iframe {
+					box-sizing: border-box;
+					width: 100%;
+					height: 100%;
+
+				} // end of iframe
+			} // end of video-wrap
+
+			#appledaily-link {
+				box-sizing: border-box;
+				display: block;
+				margin-top: 10px;
+
+				a {
+					display: inline-block;
+					font-size: 1.8rem;
+					text-decoration: none;
+					color: whitesmoke;
+					text-align: center;
+
+					span {
+						color: rgb(255,100,100);
+					}
+				} // end of a
+			} // end of appledaily-link
+
+		} // end of wrap3-inner
 
 	} // end of wrap3
 
@@ -446,13 +579,21 @@ p {
 
 	
 
-	footer {
+	#footer {
 		box-sizing: border-box;
+		display: inline-block;
+		text-align: center;
 
 		height: 50px;
 		width: 100%;
 
 		background: rgb(200,30,30);
+
+		img {
+			height: 40px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
 	} // end of footer
 
 } // end of pageWrap

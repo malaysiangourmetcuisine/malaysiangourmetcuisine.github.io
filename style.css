@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*page fade*/
 #pageWrap {
   -webkit-animation: fadein 2s;
@@ -72,7 +73,7 @@ p {
 
 #pageWrap {
   height: 100%;
-  padding-bottom: 10%; }
+  padding-bottom: 1%; }
   #pageWrap #banner {
     box-sizing: border-box;
     position: fixed;
@@ -81,21 +82,23 @@ p {
     height: 50px;
     width: 100%;
     z-index: 999;
-    background: rgba(200, 30, 30, 0.3); }
+    background: rgba(200, 30, 30, 0.9);
+    text-align: center; }
     #pageWrap #banner input {
       position: absolute;
       top: -9999px; }
     #pageWrap #banner input:checked ~ #nav {
       pointer-events: auto;
       opacity: 1;
-      width: 100%; }
+      height: 50px; }
     #pageWrap #banner #menuIcon {
       box-sizing: border-box;
-      float: left;
       margin: 5px 10px 5px 10px;
       height: 40px;
       width: 40px;
       text-align: center;
+      margin-left: auto;
+      margin-right: auto;
       /* Internet Explorer 10 */
       display: -ms-flexbox;
       -ms-flex-pack: center;
@@ -145,12 +148,12 @@ p {
       opacity: 0;
       pointer-events: none;
       position: fixed;
-      top: 0;
-      left: 60px;
-      width: 0;
-      height: 50px;
-      background: #c81e1e;
-      z-index: 1000;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: rgba(200, 30, 30, 0.9);
+      overflow-y: hidden;
       transition: opacity 800ms ease, width 800ms ease;
       -webkit-transition: opacity 800ms ease, width 800ms ease; }
       #pageWrap #banner #nav ul {
@@ -174,6 +177,7 @@ p {
           height: 40px;
           padding: 0 5px 0 5px;
           border-radius: 10px;
+          box-shadow: 0 1px 1px #464646;
           background: -webkit-linear-gradient(#ff3737, #b41e1e 90%);
           background: -moz-linear-gradient(#ff3737, #b41e1e 90%);
           background: -o-linear-gradient(#ff3737, #b41e1e 90%);
@@ -215,6 +219,62 @@ p {
     box-sizing: border-box;
     position: relative;
     display: block;
+    background: brown;
+    height: 450px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap; }
+    @media all and (max-width: 640px) {
+      #pageWrap #wrap1 {
+        height: auto; } }
+    #pageWrap #wrap1 .wrap1-inline {
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: middle; }
+      @media all and (max-width: 640px) {
+        #pageWrap #wrap1 .wrap1-inline {
+          display: block;
+          width: 100%; } }
+    #pageWrap #wrap1 #wrap1-inner-img {
+      height: 450px;
+      width: 35%;
+      background: url(resource/buburchacha.jpg) no-repeat;
+      background-position: 50% 50%;
+      background-size: cover; }
+      @media all and (max-width: 640px) {
+        #pageWrap #wrap1 #wrap1-inner-img {
+          display: block;
+          width: 100%; } }
+    #pageWrap #wrap1 #wrap1-inner-info {
+      width: 30%;
+      height: 100%;
+      color: #ffc8c8;
+      text-align: center;
+      white-space: pre-line;
+      padding: 10px;
+      overflow: auto; }
+      @media all and (max-width: 640px) {
+        #pageWrap #wrap1 #wrap1-inner-info {
+          display: block;
+          width: 100%; } }
+      #pageWrap #wrap1 #wrap1-inner-info #info-wrap {
+        display: block;
+        margin: auto; }
+    #pageWrap #wrap1 #wrap1-inner-img2 {
+      height: 450px;
+      width: 35%;
+      background: url(resource/single/乾煎黃魚.jpg) no-repeat;
+      background-position: 50% 50%;
+      background-size: cover; }
+      @media all and (max-width: 640px) {
+        #pageWrap #wrap1 #wrap1-inner-img2 {
+          display: block;
+          width: 100%; } }
+  #pageWrap #wrap2 {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
     height: auto;
     width: 100%;
     min-height: 350px;
@@ -226,28 +286,42 @@ p {
     background-attachment: fixed;
     text-align: center; }
     @media all and (max-width: 640px) {
-      #pageWrap #wrap1 {
+      #pageWrap #wrap2 {
         background-attachment: scroll; } }
-    #pageWrap #wrap1 .wrap1-inner {
+    #pageWrap #wrap2 .wrap2-inner {
+      box-sizing: border-box;
       display: inline-block;
-      margin: 25px;
+      margin: 25px 0 25px 0;
       vertical-align: middle; }
-    #pageWrap #wrap1 #wrap1-info {
-      height: auto;
+    #pageWrap #wrap2 #wrap2-info {
+      position: relative;
+      height: 400px;
       min-width: 300px;
       width: 30%;
       padding: 10px 5px 10px 5px;
       color: #505050;
       text-align: center;
+      vertical-align: middle;
       background: rgba(255, 255, 255, 0.7); }
-      #pageWrap #wrap1 #wrap1-info a {
-        text-decoration: underline;
-        color: #fa5050; }
-      #pageWrap #wrap1 #wrap1-info i {
-        color: red; }
-      #pageWrap #wrap1 #wrap1-info #map-description {
-        font-style: italic; }
-    #pageWrap #wrap1 #wrap1-map {
+      #pageWrap #wrap2 #wrap2-info #wrap2-info-inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        width: 100%; }
+        #pageWrap #wrap2 #wrap2-info #wrap2-info-inner a {
+          text-decoration: underline;
+          color: #fa5050; }
+        #pageWrap #wrap2 #wrap2-info #wrap2-info-inner i {
+          color: red; }
+        #pageWrap #wrap2 #wrap2-info #wrap2-info-inner #map-description {
+          font-style: italic; }
+    #pageWrap #wrap2 #wrap2-map {
       box-sizing: border-box;
       height: 400px;
       width: 50%;
@@ -255,11 +329,11 @@ p {
       max-width: 600px;
       margin-left: auto;
       margin-right: auto; }
-      #pageWrap #wrap1 #wrap1-map #map-canvas {
+      #pageWrap #wrap2 #wrap2-map #map-canvas {
         box-sizing: border-box;
         height: 100%;
         width: 100%; }
-        #pageWrap #wrap1 #wrap1-map #map-canvas #mapFallback {
+        #pageWrap #wrap2 #wrap2-map #map-canvas #mapFallback {
           color: rgba(255, 255, 255, 0.9);
           text-decoration: none;
           text-shadow: 0 0 3px #373737, 0 0 4px #373737, 0 0 7px #373737;
@@ -289,7 +363,7 @@ p {
           height: 100%;
           background: url(resource/mapfallback.jpg) no-repeat;
           background-size: cover; }
-          #pageWrap #wrap1 #wrap1-map #map-canvas #mapFallback #mapFallbackText {
+          #pageWrap #wrap2 #wrap2-map #map-canvas #mapFallback #mapFallbackText {
             box-sizing: border-box;
             display: inline-block;
             width: 100%;
@@ -298,23 +372,50 @@ p {
             border-radius: 15px;
             padding: 10px;
             background: rgba(50, 50, 50, 0.5); }
-  #pageWrap #wrap2 {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    background: brown;
-    height: 50%;
-    width: 100%; }
   #pageWrap #wrap3 {
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    height: 100%; }
-  #pageWrap footer {
+    height: auto; }
+    #pageWrap #wrap3 #wrap3-inner {
+      box-sizing: border-box;
+      padding: 25px;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      background: black; }
+      #pageWrap #wrap3 #wrap3-inner #video-wrap {
+        display: inline-block;
+        width: 90%;
+        height: 0;
+        padding-bottom: 57.25%; }
+        #pageWrap #wrap3 #wrap3-inner #video-wrap iframe {
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%; }
+      #pageWrap #wrap3 #wrap3-inner #appledaily-link {
+        box-sizing: border-box;
+        display: block;
+        margin-top: 10px; }
+        #pageWrap #wrap3 #wrap3-inner #appledaily-link a {
+          display: inline-block;
+          font-size: 1.8rem;
+          text-decoration: none;
+          color: whitesmoke;
+          text-align: center; }
+          #pageWrap #wrap3 #wrap3-inner #appledaily-link a span {
+            color: #ff6464; }
+  #pageWrap #footer {
     box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
     height: 50px;
     width: 100%;
     background: #c81e1e; }
+    #pageWrap #footer img {
+      height: 40px;
+      margin-top: 5px;
+      margin-bottom: 5px; }
 
 #menu-wrap {
   box-sizing: border-box;
