@@ -37,11 +37,13 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   height: 100%;
-  background: whitesmoke; }
+  background: whitesmoke;
+  font-family: "sourcehansans-tc-extralight", sans-serif; }
 
 body {
   height: 100%;
-  background: #fafafa; }
+  background: #fafafa;
+  font-family: "sourcehansans-tc-extralight", sans-serif; }
 
 h1 {
   font-size: 4.8rem;
@@ -491,6 +493,7 @@ a {
           width: 280px;
           margin: 10px 20px 10px 20px;
           font-size: 1.8rem;
+          font-family: "sourcehansans-tc-extralight", sans-serif;
           color: #966464; }
           .page-wrap #menu-wrap #menu .table-wrap table a {
             color: #966464;
