@@ -84,6 +84,11 @@ p {
 	line-height: 2.5rem;
 	font-family: "sourcehansans-tc-extralight", sans-serif;
 	font-weight: 250;
+	letter-spacing: 0.5rem;
+}
+
+a {
+	font-family: "sourcehansans-tc-extralight", sans-serif;
 }
 
 
@@ -143,9 +148,13 @@ p {
 
 				box-shadow: 0 1px 1px rgb(70,70,70);
 
-				border-radius: 20%;
+				border-radius: 15px;
 
 				cursor: pointer;
+
+					@media all and (min-width: 641px) {
+						width: 100px;
+					}
 
 					i {
 						display: inline;
@@ -154,6 +163,16 @@ p {
 						color: rgba(255,255,255,0.9);
 						text-shadow: -1px 1px 3px rgb(100,100,100);
 					} // end of i
+
+					p {
+						color: rgba(255,255,255,0.9);
+						font-size: 2.5rem;
+						font-weight: 800;
+
+						@media all and (max-width: 640px) {
+							display: none;
+						}
+					}
 			} // end of menuIcon
 
 			input:checked label {
@@ -340,11 +359,27 @@ p {
 				@media all and (max-width: 640px) {
 					display: block;
 					width: 100%;
-				}
+				} // end of media
 
 				#info-wrap {
 					display: block;
 					margin: auto;
+
+					a {
+						box-sizing: border-box;
+						text-decoration: none;
+						color: brown;
+						// padding: 3px;
+
+						span {
+							box-sizing: border-box;
+							font-size: 2.2rem;
+							background: whitesmoke;
+							background: linear-gradient(rgb(255,255,2255), rgb(200,200,200));
+							border-radius: 15px;
+							padding: 5px;
+						} // end of span
+					} // end of a
 					
 				} // end of info-wrap
 			} // end of wrap1-inner-info

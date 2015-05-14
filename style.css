@@ -70,7 +70,11 @@ p {
   font-size: 1.8rem;
   line-height: 2.5rem;
   font-family: "sourcehansans-tc-extralight", sans-serif;
-  font-weight: 250; }
+  font-weight: 250;
+  letter-spacing: 0.5rem; }
+
+a {
+  font-family: "sourcehansans-tc-extralight", sans-serif; }
 
 .page-wrap {
   height: 100%;
@@ -122,13 +126,23 @@ p {
       background: -o-linear-gradient(#ff3737, #b41e1e 90%);
       background: linear-gradient(#ff3737, #b41e1e 90%);
       box-shadow: 0 1px 1px #464646;
-      border-radius: 20%;
+      border-radius: 15px;
       cursor: pointer; }
+      @media all and (min-width: 641px) {
+        .page-wrap #banner #menuIcon {
+          width: 100px; } }
       .page-wrap #banner #menuIcon i {
         display: inline;
         font-size: 3rem;
         color: rgba(255, 255, 255, 0.9);
         text-shadow: -1px 1px 3px #646464; }
+      .page-wrap #banner #menuIcon p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 2.5rem;
+        font-weight: 800; }
+        @media all and (max-width: 640px) {
+          .page-wrap #banner #menuIcon p {
+            display: none; } }
     .page-wrap #banner input:checked label {
       background: -webkit-linear-gradient(#a01414, #e63232);
       background: -moz-linear-gradient(#a01414, #e63232);
@@ -264,6 +278,17 @@ p {
       .page-wrap #wrap1 #wrap1-inner-info #info-wrap {
         display: block;
         margin: auto; }
+        .page-wrap #wrap1 #wrap1-inner-info #info-wrap a {
+          box-sizing: border-box;
+          text-decoration: none;
+          color: brown; }
+          .page-wrap #wrap1 #wrap1-inner-info #info-wrap a span {
+            box-sizing: border-box;
+            font-size: 2.2rem;
+            background: whitesmoke;
+            background: linear-gradient(white, #c8c8c8);
+            border-radius: 15px;
+            padding: 5px; }
     .page-wrap #wrap1 #wrap1-inner-img2 {
       height: 450px;
       width: 35%;
