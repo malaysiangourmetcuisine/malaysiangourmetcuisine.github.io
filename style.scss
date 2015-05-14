@@ -177,6 +177,19 @@ a {
 					}
 			} // end of menuIcon
 
+			#menuIcon:hover {
+				background: -webkit-linear-gradient(rgb(180,30,30), rgb(255,55,55) 90%);
+				background: -moz-linear-gradient(rgb(180,30,30), rgb(255,55,55) 90%);
+				background: -o-linear-gradient(rgb(180,30,30), rgb(255,55,55) 90%);
+				background: linear-gradient(rgb(180,30,30), rgb(255,55,55) 90%);
+
+				box-shadow: 0 -1px 1px rgb(100,100,100);
+
+				i {
+					text-shadow: 0 0 3px rgb(255,255,255), 0 0 7px rgb(255,255,255);
+				}
+			}
+
 			input:checked label {
 				background: -webkit-linear-gradient(rgb(160,20,20), rgb(230,50,50));
 				background: -moz-linear-gradient(rgb(160,20,20), rgb(230,50,50));
@@ -321,7 +334,7 @@ a {
 		// padding-top: 50px;
 		@media all and (max-width: 640px) {
 					height: auto;
-				}
+				} // end of media
 
 			.wrap1-inline {
 				box-sizing: border-box;
@@ -333,7 +346,7 @@ a {
 				@media all and (max-width: 640px) {
 					display: block;
 					width: 100%;
-				}
+				} // end of media
 			} // end of .wrap1-inline
 
 			#wrap1-inner-img {
@@ -346,7 +359,7 @@ a {
 				@media all and (max-width: 640px) {
 					display: block;
 					width: 100%;
-				}
+				} // end of media
 			} // end of wrap1-inner-img
 
 			#wrap1-inner-info {
@@ -377,11 +390,19 @@ a {
 							box-sizing: border-box;
 							font-size: 2.2rem;
 							background: whitesmoke;
-							background: linear-gradient(rgb(255,255,2255), rgb(200,200,200));
+							background: linear-gradient(rgb(255,255,225), rgb(200,200,200));
 							border-radius: 15px;
-							padding: 5px;
+							padding: 5px 10px 5px 10px;
 						} // end of span
 					} // end of a
+
+					a:hover {
+						color: rgb(50,50,50);
+
+						span {
+							background: linear-gradient(rgb(200,200,200), rgb(255,255,255));
+						} // end of span
+					} // end of a:hover
 					
 				} // end of info-wrap
 			} // end of wrap1-inner-info
@@ -396,7 +417,7 @@ a {
 				@media all and (max-width: 640px) {
 					display: block;
 					width: 100%;
-				}
+				} // end of media
 			} // end of wrap1-inner-img2
 
 	} // end of wrap1

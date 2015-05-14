@@ -145,6 +145,14 @@ a {
         @media all and (max-width: 640px) {
           .page-wrap #banner #menuIcon p {
             display: none; } }
+    .page-wrap #banner #menuIcon:hover {
+      background: -webkit-linear-gradient(#b41e1e, #ff3737 90%);
+      background: -moz-linear-gradient(#b41e1e, #ff3737 90%);
+      background: -o-linear-gradient(#b41e1e, #ff3737 90%);
+      background: linear-gradient(#b41e1e, #ff3737 90%);
+      box-shadow: 0 -1px 1px #646464; }
+      .page-wrap #banner #menuIcon:hover i {
+        text-shadow: 0 0 3px white, 0 0 7px white; }
     .page-wrap #banner input:checked label {
       background: -webkit-linear-gradient(#a01414, #e63232);
       background: -moz-linear-gradient(#a01414, #e63232);
@@ -288,9 +296,13 @@ a {
             box-sizing: border-box;
             font-size: 2.2rem;
             background: whitesmoke;
-            background: linear-gradient(white, #c8c8c8);
+            background: linear-gradient(#ffffe1, #c8c8c8);
             border-radius: 15px;
-            padding: 5px; }
+            padding: 5px 10px 5px 10px; }
+        .page-wrap #wrap1 #wrap1-inner-info #info-wrap a:hover {
+          color: #323232; }
+          .page-wrap #wrap1 #wrap1-inner-info #info-wrap a:hover span {
+            background: linear-gradient(#c8c8c8, white); }
     .page-wrap #wrap1 #wrap1-inner-img2 {
       height: 450px;
       width: 35%;
