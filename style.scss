@@ -129,6 +129,10 @@ a {
 						pointer-events: auto;
 						opacity: 1;
 						height: 50px;
+
+						@media all and (max-width: 360px) {
+							height: 400px;
+						} // end of media
 			} // input:checked ~ #nav
 
 			#menuIcon {
@@ -242,13 +246,17 @@ a {
 						margin-left: auto;
 						margin-right: auto;
 
+						@media all and (max-width: 360px) {
+							white-space: pre-line;
+						} // end of media
+
 							a {
 								color: whitesmoke;
 								text-shadow: -1px 1px 3px rgb(180,180,180);
 
 								box-sizing: border-box;
 
-							}
+							} // end of a
 
 							li {
 								display: inline-block;
@@ -256,6 +264,7 @@ a {
 								font-weight: 800;
 								letter-spacing: 0.2rem;
 								word-spacing: 0.2rem;
+
 
 								height: 40px;
 								padding: 0 5px 0 5px;
@@ -267,11 +276,23 @@ a {
 								background:    -moz-linear-gradient(rgb(255,55,55), rgb(180,30,30) 90%);
 								background:      -o-linear-gradient(rgb(255,55,55), rgb(180,30,30) 90%);
 								background: 		linear-gradient(rgb(255,55,55), rgb(180,30,30) 90%);
+
+								@media all and (max-width: 360px) {
+									display: block;
+									width: 100%;
+									white-space: pre-line;
+									border-radius: 0;
+								} // end of media
 							} // end of li
 
 							#li-2, #li-3 {
 								margin-left: 5px;
-							}
+							} // end of li-2, li-3
+
+							#li-0 {
+								margin-right: 5px;
+							} // end of li-0
+
 					} // end of ul
 
 			} // end of nav
@@ -327,8 +348,7 @@ a {
 		background: brown;
 		height: 450px;
 		width: 100%;
-		overflow-x: auto;
-		overflow-y: hidden;
+		overflow: hidden;
 		white-space: nowrap;
 		// padding-bottom: 50px;
 		// padding-top: 50px;
@@ -591,7 +611,7 @@ a {
 			#video-wrap {
 				display: inline-block;
 				width: 90%;
-				height: 0;
+				height: auto;
 				padding-bottom: 57.25%;
 
 				iframe {
@@ -657,7 +677,6 @@ a {
 			margin-top: 5px;
 			margin-bottom: 5px;
 
-			fill: rgb(100,100,255);
 		}
 	} // end of footer
 
@@ -733,6 +752,7 @@ a {
 					table {
 						box-sizing: border-box;
 						float: left;
+						border-collapse: separate;
 
 						// min-width: 300px;
 						// max-width: 350px;
@@ -768,9 +788,33 @@ a {
 								width: 100%;
 							} // end of tr
 
+							tr:hover {
+								background: rgba(255,235,190,0.3);
+								// box-shadow: -1px 1px 3px rgb(180,150,150);
+								// border-left: solid 1px rgb(180,150,150);
+								// border-bottom: solid 1px rgb(150,120,120);
+
+								td, a {
+									color: rgb(255,170,170);
+								}
+							} // end of tr:hover
+
+								.menu-category:hover {
+									background:transparent;
+								} // end of .menu-category:hover
+
+								#combo-1-tr:hover {
+									background:transparent;
+
+									span {
+										color: rgb(150,100,100);
+									}
+								}
+
 							td {
 								padding: 5px;
 								// color: rgb()
+
 							} // end of td
 
 							td:nth-child(1) {
@@ -786,12 +830,14 @@ a {
 
 							th {
 								// border-bottom: solid 1px rgb(180,180,180);
+
 								height: 35px;
 								padding: 5px;
 								font-size: 2.5rem;
-								// background: rgb(255,140,130);
-								background: linear-gradient(rgb(255,180,160), rgb(255,140,130) 90%);
-								// border: solid 1px rgb()
+								
+								// background: linear-gradient(rgb(255,180,160), rgb(255,140,130) 90%);
+								background: transparent;
+								border: solid 2px rgb(150,120,100);
 								border-radius: 25px;
 
 								color: rgb(120,50,50);
@@ -799,12 +845,18 @@ a {
 						
 					} // end of table
 
+					// table:hover {
+					// 	box-shadow: -1px 1px 3px rgb(180,150,150);
+					// } // end of table:hover
+
 					#combo {
 
 							#combo-1 {
 								font-size: 1.8rem;
 								width: 100%;
 								text-align: center;
+								font-style: italic;
+								font-weight: 300;
 								// background: red;
 								
 							} // end of span
@@ -821,20 +873,22 @@ a {
 		} // end of menu
 
 		.lb {
-			display: none;
+			display: block;
 			opacity: 0;
 			position: fixed;
+			z-index: -2;
 			left: 0;
 			top: 0;
-
 
 			width: 100%;
 			height: 100%;
 			// text-align: center;
 			text-decoration: none;
 			background-color: rgba(0,0,0,0.7);
-			-webkit-transition: all 500ms;
-			transition: all 500ms;
+			-webkit-transition: all 1s;
+			-moz-transition: all 1s;
+			-o-transition: all 1s;
+			transition: all 1s;
 
 			img {
 				position: absolute;
@@ -851,16 +905,17 @@ a {
 				@media all and (max-width: 640px) {
 					width: 80%;
 					height: auto;
-				}
-			}
+				} // end of media
+			} // end of img
 
-		}
+		} // end of lb
 
 		.lb:target {
-			display: block;
+			// display: block;
+			z-index: 10;
 			opacity: 1;
 			outline: none;
-		}
+		} // end of lb:target
 
 } // end of menu-wrap
 

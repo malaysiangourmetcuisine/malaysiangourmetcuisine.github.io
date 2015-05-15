@@ -99,6 +99,9 @@ a {
       pointer-events: auto;
       opacity: 1;
       height: 50px; }
+      @media all and (max-width: 360px) {
+        .page-wrap #banner input:checked ~ #nav {
+          height: 400px; } }
     .page-wrap #banner #menuIcon {
       box-sizing: border-box;
       margin: 5px 10px 5px 10px;
@@ -191,6 +194,9 @@ a {
         white-space: nowrap;
         margin-left: auto;
         margin-right: auto; }
+        @media all and (max-width: 360px) {
+          .page-wrap #banner #nav ul {
+            white-space: pre-line; } }
         .page-wrap #banner #nav ul a {
           color: whitesmoke;
           text-shadow: -1px 1px 3px #b4b4b4;
@@ -209,8 +215,16 @@ a {
           background: -moz-linear-gradient(#ff3737, #b41e1e 90%);
           background: -o-linear-gradient(#ff3737, #b41e1e 90%);
           background: linear-gradient(#ff3737, #b41e1e 90%); }
+          @media all and (max-width: 360px) {
+            .page-wrap #banner #nav ul li {
+              display: block;
+              width: 100%;
+              white-space: pre-line;
+              border-radius: 0; } }
         .page-wrap #banner #nav ul #li-2, .page-wrap #banner #nav ul #li-3 {
           margin-left: 5px; }
+        .page-wrap #banner #nav ul #li-0 {
+          margin-right: 5px; }
   .page-wrap #wrap0 {
     box-sizing: border-box;
     height: 100%;
@@ -249,8 +263,7 @@ a {
     background: brown;
     height: 450px;
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     white-space: nowrap; }
     @media all and (max-width: 640px) {
       .page-wrap #wrap1 {
@@ -429,7 +442,7 @@ a {
       .page-wrap #wrap3 #wrap3-inner #video-wrap {
         display: inline-block;
         width: 90%;
-        height: 0;
+        height: auto;
         padding-bottom: 57.25%; }
         .page-wrap #wrap3 #wrap3-inner #video-wrap iframe {
           box-sizing: border-box;
@@ -457,8 +470,7 @@ a {
     .page-wrap #footer img {
       height: 40px;
       margin-top: 5px;
-      margin-bottom: 5px;
-      fill: #6464ff; }
+      margin-bottom: 5px; }
   .page-wrap #menu-wrap {
     box-sizing: border-box;
     position: relative;
@@ -501,6 +513,7 @@ a {
         .page-wrap #menu-wrap #menu .table-wrap table {
           box-sizing: border-box;
           float: left;
+          border-collapse: separate;
           height: 380px;
           width: 280px;
           margin: 10px 20px 10px 20px;
@@ -517,6 +530,16 @@ a {
             width: 100%; }
           .page-wrap #menu-wrap #menu .table-wrap table tr {
             width: 100%; }
+          .page-wrap #menu-wrap #menu .table-wrap table tr:hover {
+            background: rgba(255, 235, 190, 0.3); }
+            .page-wrap #menu-wrap #menu .table-wrap table tr:hover td, .page-wrap #menu-wrap #menu .table-wrap table tr:hover a {
+              color: #ffaaaa; }
+          .page-wrap #menu-wrap #menu .table-wrap table .menu-category:hover {
+            background: transparent; }
+          .page-wrap #menu-wrap #menu .table-wrap table #combo-1-tr:hover {
+            background: transparent; }
+            .page-wrap #menu-wrap #menu .table-wrap table #combo-1-tr:hover span {
+              color: #966464; }
           .page-wrap #menu-wrap #menu .table-wrap table td {
             padding: 5px; }
           .page-wrap #menu-wrap #menu .table-wrap table td:nth-child(1) {
@@ -529,25 +552,31 @@ a {
             height: 35px;
             padding: 5px;
             font-size: 2.5rem;
-            background: linear-gradient(#ffb4a0, #ff8c82 90%);
+            background: transparent;
+            border: solid 2px #967864;
             border-radius: 25px;
             color: #783232; }
         .page-wrap #menu-wrap #menu .table-wrap #combo #combo-1 {
           font-size: 1.8rem;
           width: 100%;
-          text-align: center; }
+          text-align: center;
+          font-style: italic;
+          font-weight: 300; }
     .page-wrap #menu-wrap .lb {
-      display: none;
+      display: block;
       opacity: 0;
       position: fixed;
+      z-index: -2;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
       text-decoration: none;
       background-color: rgba(0, 0, 0, 0.7);
-      -webkit-transition: all 500ms;
-      transition: all 500ms; }
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
       .page-wrap #menu-wrap .lb img {
         position: absolute;
         height: 70%;
@@ -561,7 +590,7 @@ a {
             width: 80%;
             height: auto; } }
     .page-wrap #menu-wrap .lb:target {
-      display: block;
+      z-index: 10;
       opacity: 1;
       outline: none; }
 
