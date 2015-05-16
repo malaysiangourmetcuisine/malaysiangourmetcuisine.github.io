@@ -72,7 +72,7 @@ p {
   font-size: 1.8rem;
   line-height: 2.5rem;
   font-family: "sourcehansans-tc-extralight", sans-serif;
-  font-weight: 250;
+  font-weight: 800;
   letter-spacing: 0.5rem; }
 
 a {
@@ -145,7 +145,7 @@ a {
         color: rgba(255, 255, 255, 0.9);
         font-size: 2.5rem;
         font-weight: 800; }
-        @media all and (max-width: 640px) {
+        @media all and (max-width: 700px) {
           .page-wrap #banner #menuIcon p {
             display: none; } }
     .page-wrap #banner #menuIcon:hover {
@@ -233,7 +233,7 @@ a {
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
-    @media all and (max-width: 640px) {
+    @media all and (max-width: 700px) {
       .page-wrap #wrap0 {
         background-attachment: scroll; } }
     .page-wrap #wrap0 #title-wrap {
@@ -245,7 +245,7 @@ a {
       -ms-transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       width: 700px; }
-      @media all and (max-width: 640px) {
+      @media all and (max-width: 700px) {
         .page-wrap #wrap0 #title-wrap {
           width: 300px; } }
       .page-wrap #wrap0 #title-wrap h1 {
@@ -253,7 +253,7 @@ a {
         font-weight: 300;
         text-align: center;
         color: rgba(255, 255, 255, 0.9); }
-        @media all and (max-width: 640px) {
+        @media all and (max-width: 700px) {
           .page-wrap #wrap0 #title-wrap h1 span {
             display: block; } }
   .page-wrap #wrap1 {
@@ -265,14 +265,14 @@ a {
     width: 100%;
     overflow: hidden;
     white-space: nowrap; }
-    @media all and (max-width: 640px) {
+    @media all and (max-width: 700px) {
       .page-wrap #wrap1 {
         height: auto; } }
     .page-wrap #wrap1 .wrap1-inline {
       box-sizing: border-box;
       display: inline-block;
       vertical-align: middle; }
-      @media all and (max-width: 640px) {
+      @media all and (max-width: 700px) {
         .page-wrap #wrap1 .wrap1-inline {
           display: block;
           width: 100%; } }
@@ -282,36 +282,41 @@ a {
       background: url(resource/buburchacha.jpg) no-repeat;
       background-position: 50% 50%;
       background-size: cover; }
-      @media all and (max-width: 640px) {
+      @media all and (max-width: 700px) {
         .page-wrap #wrap1 #wrap1-inner-img {
           display: block;
           width: 100%; } }
     .page-wrap #wrap1 #wrap1-inner-info {
       width: 30%;
       height: 100%;
-      color: #ffc8c8;
+      color: #e6e6e6;
       text-align: center;
       white-space: pre-line;
       padding: 10px;
       overflow: auto; }
-      @media all and (max-width: 640px) {
+      @media all and (max-width: 700px) {
         .page-wrap #wrap1 #wrap1-inner-info {
           display: block;
           width: 100%; } }
       .page-wrap #wrap1 #wrap1-inner-info #info-wrap {
         display: block;
         margin: auto; }
+        @media all and (min-width: 900px) {
+          .page-wrap #wrap1 #wrap1-inner-info #info-wrap {
+            padding-left: 25px;
+            padding-right: 25px; } }
         .page-wrap #wrap1 #wrap1-inner-info #info-wrap a {
           box-sizing: border-box;
           text-decoration: none;
           color: brown; }
           .page-wrap #wrap1 #wrap1-inner-info #info-wrap a span {
             box-sizing: border-box;
-            font-size: 2.2rem;
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
             background: whitesmoke;
             background: linear-gradient(#ffffe1, #c8c8c8);
             border-radius: 15px;
-            padding: 5px 10px 5px 10px; }
+            padding: 5px 20px 5px 20px; }
         .page-wrap #wrap1 #wrap1-inner-info #info-wrap a:hover {
           color: #323232; }
           .page-wrap #wrap1 #wrap1-inner-info #info-wrap a:hover span {
@@ -322,7 +327,7 @@ a {
       background: url(resource/single/乾煎黃魚.jpg) no-repeat;
       background-position: 50% 50%;
       background-size: cover; }
-      @media all and (max-width: 640px) {
+      @media all and (max-width: 700px) {
         .page-wrap #wrap1 #wrap1-inner-img2 {
           display: block;
           width: 100%; } }
@@ -340,25 +345,35 @@ a {
     background-position: 50% 50%;
     background-attachment: fixed;
     text-align: center; }
-    @media all and (max-width: 640px) {
+    @media all and (max-width: 700px) {
       .page-wrap #wrap2 {
-        background-attachment: scroll; } }
-    .page-wrap #wrap2 .wrap2-inner {
+        background-attachment: scroll;
+        padding: 0; } }
+    .page-wrap #wrap2 .wrap2-inner-class {
       box-sizing: border-box;
       display: inline-block;
       margin: 25px 0 25px 0;
       vertical-align: middle; }
-    .page-wrap #wrap2 #wrap2-info {
+      @media all and (max-width: 700px) {
+        .page-wrap #wrap2 .wrap2-inner-class {
+          margin: 0;
+          display: block;
+          width: 100%; } }
+    .page-wrap #wrap2 #wrap2-info-wrap {
       position: relative;
       height: 400px;
       min-width: 300px;
       width: 30%;
-      padding: 10px 5px 10px 5px;
+      padding: 10px 35px 10px 35px;
       color: #505050;
       text-align: center;
       vertical-align: middle;
       background: rgba(255, 255, 255, 0.7); }
-      .page-wrap #wrap2 #wrap2-info #wrap2-info-inner {
+      @media all and (max-width: 700px) {
+        .page-wrap #wrap2 #wrap2-info-wrap {
+          background: rgba(255, 255, 255, 0.9);
+          width: 100%; } }
+      .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -369,12 +384,24 @@ a {
         -ms-transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         width: 100%; }
-        .page-wrap #wrap2 #wrap2-info #wrap2-info-inner a {
-          text-decoration: underline;
+        .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info a {
+          text-decoration: none;
           color: #fa5050; }
-        .page-wrap #wrap2 #wrap2-info #wrap2-info-inner i {
+        .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info i {
           color: red; }
-        .page-wrap #wrap2 #wrap2-info #wrap2-info-inner #map-description {
+        .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info a:hover {
+          color: #c8aa1e; }
+        .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info img {
+          width: 30px;
+          height: 30px;
+          -webkit-transition: all 300ms;
+          -moz-transition: all 300ms;
+          -o-transition: all 300ms;
+          transition: all 100ms; }
+        .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info img:hover {
+          width: 40px;
+          height: 40px; }
+        .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info #map-description {
           font-style: italic; }
     .page-wrap #wrap2 #wrap2-map {
       box-sizing: border-box;
@@ -384,6 +411,11 @@ a {
       max-width: 600px;
       margin-left: auto;
       margin-right: auto; }
+      @media all and (max-width: 700px) {
+        .page-wrap #wrap2 #wrap2-map {
+          display: block;
+          width: 100%;
+          max-width: 100%; } }
       .page-wrap #wrap2 #wrap2-map #map-canvas {
         box-sizing: border-box;
         height: 100%;
@@ -441,9 +473,12 @@ a {
       background: black; }
       .page-wrap #wrap3 #wrap3-inner #video-wrap {
         display: inline-block;
-        width: 90%;
-        height: auto;
-        padding-bottom: 57.25%; }
+        width: 48vw;
+        height: 30vw; }
+        @media all and (max-width: 700px) {
+          .page-wrap #wrap3 #wrap3-inner #video-wrap {
+            width: 80vw;
+            height: 50vw; } }
         .page-wrap #wrap3 #wrap3-inner #video-wrap iframe {
           box-sizing: border-box;
           width: 100%;
@@ -467,10 +502,26 @@ a {
     height: 50px;
     width: 100%;
     background: #c81e1e; }
-    .page-wrap #footer img {
-      height: 40px;
-      margin-top: 5px;
-      margin-bottom: 5px; }
+    .page-wrap #footer #foot-wrap {
+      width: 150px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto; }
+      .page-wrap #footer #foot-wrap img {
+        box-sizing: border-box;
+        float: left;
+        height: 40px;
+        width: 40px;
+        margin: 5px; }
+      .page-wrap #footer #foot-wrap .fb-like {
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        width: 87px;
+        height: 50px; }
+        .page-wrap #footer #foot-wrap .fb-like iframe {
+          padding-top: 15px;
+          padding-bottom: 15px; }
   .page-wrap #menu-wrap {
     box-sizing: border-box;
     position: relative;
@@ -478,7 +529,13 @@ a {
     height: auto;
     margin-top: 50px;
     padding-bottom: 100px;
-    background: whitesmoke; }
+    background: url(resource/menu-bkgd.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%; }
+    @media all and (max-width: 700px) {
+      .page-wrap #menu-wrap {
+        background-attachment: scroll; } }
     .page-wrap #menu-wrap #menu {
       box-sizing: border-box;
       margin: 0 auto;
@@ -487,9 +544,9 @@ a {
       @media all and (min-width: 320px) {
         .page-wrap #menu-wrap #menu {
           width: 320px; } }
-      @media all and (min-width: 640px) {
+      @media all and (min-width: 700px) {
         .page-wrap #menu-wrap #menu {
-          width: 640px; } }
+          width: 700px; } }
       @media all and (min-width: 960px) {
         .page-wrap #menu-wrap #menu {
           width: 960px; } }
@@ -524,6 +581,8 @@ a {
           .page-wrap #menu-wrap #menu .table-wrap table a {
             color: #966464;
             text-decoration: none; }
+            .page-wrap #menu-wrap #menu .table-wrap table a i {
+              color: #e11e1e; }
           .page-wrap #menu-wrap #menu .table-wrap table td, .page-wrap #menu-wrap #menu .table-wrap table th {
             vertical-align: middle; }
           .page-wrap #menu-wrap #menu .table-wrap table caption {
@@ -533,7 +592,10 @@ a {
           .page-wrap #menu-wrap #menu .table-wrap table tr:hover {
             background: rgba(255, 235, 190, 0.3); }
             .page-wrap #menu-wrap #menu .table-wrap table tr:hover td, .page-wrap #menu-wrap #menu .table-wrap table tr:hover a {
-              color: #ffaaaa; }
+              color: #ff5050; }
+              .page-wrap #menu-wrap #menu .table-wrap table tr:hover td i, .page-wrap #menu-wrap #menu .table-wrap table tr:hover a i {
+                color: #ff8282;
+                text-shadow: 0 0 3px white, 0 0 5px white; }
           .page-wrap #menu-wrap #menu .table-wrap table .menu-category:hover {
             background: transparent; }
           .page-wrap #menu-wrap #menu .table-wrap table #combo-1-tr:hover {
@@ -585,7 +647,7 @@ a {
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%); }
-        @media all and (max-width: 640px) {
+        @media all and (max-width: 700px) {
           .page-wrap #menu-wrap .lb img {
             width: 80%;
             height: auto; } }

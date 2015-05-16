@@ -15,10 +15,21 @@
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
+		<script type="text/javascript">
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=86580087431";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+
 	</head>
 
 
 	<body>
+		<div id="fb-root"></div>
 
 		<div class="page-wrap">
 			<div id="banner">
@@ -38,6 +49,7 @@
 		<div id="menu-wrap">
 			
 				<div id="menu">
+					<p></p>
 					<div class="table-wrap">
 					<table id="combo">
 						<!-- <caption>精緻套餐</caption> -->
@@ -75,17 +87,17 @@
 						</tr>
 
 						<tr>
-							<td>肉骨茶</td>
+							<td><a href="#lb-combo-bakkutteh">肉骨茶 <i class="fa fa-picture-o"></i></a></td>
 							<td>220</td>
 						</tr>
 
 						<tr>
-							<td>半筋半肉牛肉飯</td>
+							<td><a href="#lb-combo-beefrice">半筋半肉牛肉飯 <i class="fa fa-picture-o"></i></a></td>
 							<td>220</td>
 						</tr>
 
 						<tr>
-							<td>海南雞飯</td>
+							<td><a href="#lb-combo-hainanchicken">海南雞飯 <i class="fa fa-picture-o"></i></a></td>
 							<td>220</td>
 						</tr>
 
@@ -113,7 +125,7 @@
 						</tr>
 
 						<tr>
-							<td>豆油肉</td>
+							<td><a href="#lb-single-brownsaucepork">豆油肉 <i class="fa fa-picture-o"></i></a></td>
 							<td>180</td>
 						</tr>
 
@@ -122,17 +134,17 @@
 						</tr>
 
 						<tr>
-							<td>咖哩雞肉</td>
+							<td><a href="#lb-single-currychicken">咖哩雞肉 <i class="fa fa-picture-o"></i></a></td>
 							<td>180</td>
 						</tr>
 
 						<tr>
-							<td>娘惹麻油雞</td>
+							<td><a href="#lb-single-nyonyachicken">娘惹麻油雞 <i class="fa fa-picture-o"></i></a></td>
 							<td>180</td>
 						</tr>
 
 						<tr>
-							<td>馬來炸雞 (2塊)</td>
+							<td><a href="#lb-single-friedchicken">馬來炸雞 (2塊) <i class="fa fa-picture-o"></i></a></td>
 							<td>260</td>
 						</tr>
 					</table> <!-- end of lunch-pork-chicken -->
@@ -151,7 +163,7 @@
 						</tr>
 
 						<tr>
-							<td>潮州蒸魚 (鱸魚)</td>
+							<td><a href="#lb-single-streamedbass">潮州蒸魚 (鱸魚) <i class="fa fa-picture-o"></i></a></td>
 							<td>時價</td>
 						</tr>
 
@@ -166,12 +178,12 @@
 						</tr>
 
 						<tr>
-							<td>咖哩魚 (黃魚)</td>
+							<td><a href="#lb-single-curryfish">咖哩魚 (黃魚) <i class="fa fa-picture-o"></i></a></td>
 							<td>時價</td>
 						</tr>
 
 						<tr>
-							<td>咖哩海鮮鍋</td>
+							<td><a href="#lb-single-curryseafood">咖哩海鮮鍋 <i class="fa fa-picture-o"></i></a></td>
 							<td>600</td>
 						</tr>
 					</table> <!-- end of fish -->
@@ -184,12 +196,12 @@
 						</tr>
 
 						<tr>
-							<td>豆醬蝦</td>
+							<td><a href="#lb-single-beansauceshrimp">豆醬蝦 <i class="fa fa-picture-o"></i></a></td>
 							<td>300</td>
 						</tr>
 
 						<tr>
-							<td>參巴蝦</td>
+							<td><a href="#lb-single-sambalshrimp">參巴蝦 <i class="fa fa-picture-o"></i></a></td>
 							<td>300</td>
 						</tr>
 
@@ -204,7 +216,7 @@
 						</tr>
 
 						<tr>
-							<td>參巴花枝</td>
+							<td><a href="#lb-single-sambalsquid">參巴花枝 <i class="fa fa-picture-o"></i></a></td>
 							<td>380</td>
 						</tr>
 
@@ -228,7 +240,7 @@
 						</tr>
 
 						<tr>
-							<td>羅加什錦蔬果沙拉</td>
+							<td><a href="#lb-single-rojaksalad">羅加什錦蔬果沙拉 <i class="fa fa-picture-o"></i></a></td>
 							<td>100</td>
 						</tr>
 
@@ -238,7 +250,7 @@
 						</tr>
 
 						<tr>
-							<td>參巴米里魚</td>
+							<td><a href="#lb-single-sambalfish">參巴米里魚 <i class="fa fa-picture-o"></i></a></td>
 							<td>150</td>
 						</tr>
 
@@ -248,7 +260,7 @@
 						</tr>
 
 						<tr>
-							<td>馬來風光</td>
+							<td><a href="#lb-single-sambalbelacan">馬來風光 <i class="fa fa-picture-o"></i></a></td>
 							<td>160</td>
 						</tr>
 
@@ -287,12 +299,12 @@
 						</tr>
 
 						<tr>
-							<td>馬來炒飯</td>
+							<td><a href="#lb-single-malayfriedrice">馬來炒飯 <i class="fa fa-picture-o"></i></a></td>
 							<td>120</td>
 						</tr>
 
 						<tr>
-							<td>星洲炒米粉</td>
+							<td><a href="#lb-single-sgricenoodle">星洲炒米粉 <i class="fa fa-picture-o"></i></a></td>
 							<td>120</td>
 						</tr>
 					</table> <!-- end of etc -->
@@ -316,12 +328,12 @@
 						</tr>
 
 						<tr>
-							<td>摩摩喳喳</td>
+							<td><a href="#lb-single-buburchacha">摩摩喳喳 <i class="fa fa-picture-o"></i></a></td>
 							<td>80</td>
 						</tr>
 
 						<tr>
-							<td>印度奶茶</td>
+							<td><a href="#lb-single-tehtarik">印度奶茶 <i class="fa fa-picture-o"></i></a></td>
 							<td>80</td>
 						</tr>
 
@@ -331,7 +343,7 @@
 						</tr>
 
 						<tr>
-							<td>花茶系列</td>
+							<td><a href="#lb-single-flowertea">花茶系列 <i class="fa fa-picture-o"></i></a></td>
 							<td>80</td>
 						</tr>
 					</table> <!-- end of desert -->
@@ -344,10 +356,40 @@
 					<a href="#_" id="lb-combo-tomyumricenoodle" class="lb"><img src="resource/combo/海鮮冬炎米粉.jpg"></a>
 					<a href="#_" id="lb-combo-friedchicken" class="lb"><img src="resource/combo/馬來炸雞套餐.jpg"></a>
 					<a href="#_" id="lb-combo-chickennasilemak" class="lb"><img src="resource/combo/咖哩雞肉椰漿飯.jpg"</a>
+					<a href="#_" id="lb-combo-bakkutteh" class="lb"><img src="resource/combo/肉骨茶套餐(飯).jpg"></a>
+					<a href="#_" id="lb-combo-beefrice" class="lb"><img src="resource/combo/半筋半肉牛肉飯.jpg"></a>
+					<a href="#_" id="lb-combo-hainanchicken" class="lb"><img src="resource/combo/海南雞飯.jpg"></a>
+
+					<a href="#_" id="lb-single-brownsaucepork" class="lb"><img src="resource/single/豆油肉.jpg"></a>
+					<a href="#_" id="lb-single-currychicken" class="lb"><img src="resource/single/咖哩雞肉.jpg"></a>
+					<a href="#_" id="lb-single-nyonyachicken" class="lb"><img src="resource/single/娘惹麻油雞.jpg"></a>
+					<a href="#_" id="lb-single-friedchicken" class="lb"><img src="resource/single/馬來炸雞.jpg"></a>
+					<a href="#_" id="lb-single-steamedgrouper" class="lb"><img src="resource/single/潮州蒸魚.jpg"></a>
+					<a href="#_" id="lb-single-streamedbass" class="lb"><img src="resource/single/潮州蒸魚.jpg"></a>
+					<a href="#_" id="lb-single-curryseafood" class="lb"><img src="resource/single/咖哩海鮮鍋.jpg"></a>
+					<a href="#_" id="lb-single-beansauceshrimp" class="lb"><img src="resource/single/豆醬蝦.jpg"></a>
+					<a href="#_" id="lb-single-sambalshrimp" class="lb"><img src="resource/single/參巴蝦.jpg"></a>
+					<a href="#_" id="lb-single-curryfish" class="lb"><img src="resource/single/乾煎黃魚.jpg"></a>
+					<a href="#_" id="lb-single-sambalsquid" class="lb"><img src="resource/single/參巴花枝.jpg"></a>
+					<a href="#_" id="lb-single-rojaksalad" class="lb"><img src="resource/single/羅加什錦蔬果沙拉.jpg"></a>
+					<a href="#_" id="lb-single-sambalfish" class="lb"><img src="resource/single/參巴米里魚.jpg"></a>
+					<a href="#_" id="lb-single-sambalbelacan" class="lb"><img src="resource/single/馬來風光.jpg"></a>
+					<a href="#_" id="lb-single-malayfriedrice" class="lb"><img src="resource/single/馬來炒飯.jpg"></a>
+					<a href="#_" id="lb-single-sgricenoodle" class="lb"><img src="resource/single/星洲炒米粉.jpg"></a>
+					<a href="#_" id="lb-single-buburchacha" class="lb"><img src="resource/single/buburchacha.jpg"></a>
+					<a href="#_" id="lb-single-tehtarik" class="lb"><img src="resource/single/tehtarik.jpg"></a>
+					<a href="#_" id="lb-single-flowertea" class="lb"><img src="resource/single/flowertea.jpg"></a>
+					
+
 			</div> <!-- end of menu-wrap -->
 
 			<div id="footer">
-				<a href="https://www.facebook.com/malaysiangourmetcuisine" target="_blank"><img src="resource/facebook.png"></a>
+				<div id="foot-wrap">
+					<a href="https://www.facebook.com/malaysiangourmetcuisine" target="_blank"><img src="resource/facebook.png"></a>
+					
+					
+					<div class="fb-like" data-href="https://facebook.com/malaysiangourmetcuisine" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+				</div> <!-- end of foot-wrap -->
 			</div> <!-- end of footer -->
 	</div> <!-- end of page-wrap -->
 
