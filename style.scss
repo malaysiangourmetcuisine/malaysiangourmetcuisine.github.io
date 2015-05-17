@@ -46,7 +46,7 @@ html {
 	box-sizing: border-box;
 	height: 100%;
 
-	background: whitesmoke;
+	background: red;
 	font-family: "sourcehansans-tc-extralight", sans-serif;
 }
 
@@ -98,12 +98,8 @@ a {
 
 .page-wrap {
 	height: 100%;
-	// margin-top: 70px;
 	padding-bottom: 1%;
-	background: whitesmoke;
-	// opacity: 0;
-	// -webkit-overflow-scrolling: touch;
-
+	background: rgb(200,30,30);
 
 	#banner {
 		box-sizing: border-box;
@@ -115,13 +111,6 @@ a {
 		z-index: 999;
 		background: rgba(200,30,30,0.9);
 		text-align: center;
-		// background: rgba(230,230,230,0.5);
-
-		// background: url(resource/interior6.jpg) no-repeat;
-		// background-size: cover;
-
-		// border-bottom-left-radius: 5px;
-		// border-bottom-right-radius: 5px;
 
 			input {
 				position: absolute;
