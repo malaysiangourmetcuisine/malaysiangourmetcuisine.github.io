@@ -390,7 +390,7 @@ a {
         .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info i {
           color: red; }
         .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info a:hover {
-          color: #c8aa1e; }
+          color: #fadc82; }
         .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info img {
           width: 30px;
           height: 30px;
@@ -401,6 +401,8 @@ a {
         .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info img:hover {
           width: 40px;
           height: 40px; }
+        .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info #fb-caption {
+          text-shadow: -1px 1px 2px #646464; }
         .page-wrap #wrap2 #wrap2-info-wrap #wrap2-info #map-description {
           font-style: italic; }
     .page-wrap #wrap2 #wrap2-map {

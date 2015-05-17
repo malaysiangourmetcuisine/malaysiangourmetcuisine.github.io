@@ -527,7 +527,7 @@ a {
 					} // end of i
 
 					a:hover {
-						color: rgb(200,170,30);
+						color: rgb(250,220,130);
 					}
 
 					img {
@@ -544,6 +544,10 @@ a {
 						width: 40px;
 						height: 40px;
 					} // end of img:hover
+
+					#fb-caption {
+						text-shadow: -1px 1px 2px rgb(100,100,100);
+					} // end of fb-caption
 
 					#map-description {
 						font-style: italic;
